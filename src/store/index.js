@@ -2,6 +2,6 @@ import { reactive }  from 'vue';
 
 export const store = reactive({
     api:{
-        baseUrl:'http://127.0.0.1:8000',
+        baseUrl:'https://laravel-gdr-419c769c295d.herokuapp.com',
     },
 });
