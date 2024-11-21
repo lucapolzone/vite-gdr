@@ -82,7 +82,7 @@ export default {
     <h1 class="text-center text-light">{{ title }}</h1>
     
     <!-- BOTTONE -->
-    <div class="text-center my-2 ms-button-wrapper">
+    <div class="text-center my-4 ms-button-wrapper">
       <button class="btn btn-success me-5 fw-bold" @click="handleStart('player')">PESCA UNA CARTA!</button>
       <button class="btn btn-warning fw-bold" @click="handleStart('pc')">PESCA LA CARTA DEL PC!</button>
     </div>
