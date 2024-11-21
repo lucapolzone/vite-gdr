@@ -6,7 +6,7 @@ export default {
   data() {
     return {
       api: store.api,
-      title: "Card VS Card",
+      title: "Card VS Card!",
       characters: [],
       userCard: null,
       pcCard: null,
@@ -80,17 +80,19 @@ export default {
 <template>
   <div class="container">
     <h1 class="text-center text-light">{{ title }}</h1>
-    
-    <!-- BOTTONE -->
-    <div class="text-center my-4 ms-button-wrapper">
-      <button class="btn btn-success me-5 fw-bold" @click="handleStart('player')">PESCA UNA CARTA!</button>
-      <button class="btn btn-warning fw-bold" @click="handleStart('pc')">PESCA LA CARTA DEL PC!</button>
-    </div>
+    <p style="font-size: 1.4rem; line-height: 1.7rem;" class="text-center fw-bold text-light">Pesca le carte, premi su FIGHT! e scopri qual è la più forte!</p>
 
     <!-- CARD -->
     <div class="row g-3 d-flex justify-content-center align-items-center">
       <div class="col-12 col-lg-5 d-flex flex-column align-items-center">
-        <h4 class="text-light">USER</h4>
+        <div class="text-center">
+          <button class="btn btn-success fw-bold my-4" @click="handleStart('player')">PESCA UNA CARTA!</button>
+        </div>
+        
+        <div class="text-center mt-3">
+          <h4 class="text-light">USER</h4>
+        </div>
+        
         <div v-if="userCard" class="card border-0 bg-transparent w-100 mb-3">
           <div class="card-header border-0 p-0">
             <h5 class="card-title text-center fs-1 text-light">{{ userCard.name }}</h5>
@@ -115,7 +117,10 @@ export default {
         </div>
 
         <div v-else>
-          <p class="text-warning fw-bold">NESSUNA CARTA SCELTA</p>
+          <div class="text-center">
+            <p class="text-warning fw-bold">NESSUNA CARTA SCELTA</p>
+          </div>
+
         </div>
       </div>
 
@@ -126,7 +131,14 @@ export default {
       </div>
 
       <div class="col-12 col-lg-5 d-flex flex-column align-items-center">
-        <h4 class="text-light">COMPUTER</h4>
+        <div class="text-center">
+          <button class="btn btn-warning fw-bold my-4" @click="handleStart('pc')">PESCA LA CARTA DEL PC!</button>
+        </div>
+        
+        <div class="text-center mt-3">
+          <h4 class="text-light">COMPUTER</h4>
+        </div>
+
         <div v-if="pcCard" class="card border-0 bg-transparent w-100 mb-3">
           <div class="card-header border-0 p-0 text-light">
             <h5 class="card-title text-center fs-1">{{ pcCard.name }}</h5>
@@ -151,7 +163,9 @@ export default {
         </div>
 
         <div v-else>
-          <p class="text-warning fw-bold">NESSUNA CARTA SCELTA</p>
+          <div class="text-center">
+            <p class="text-warning fw-bold">NESSUNA CARTA SCELTA</p>
+          </div>
         </div>
       </div>
     </div>
