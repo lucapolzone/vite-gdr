@@ -119,7 +119,7 @@ export default {
         </div>
       </div>
 
-      <div class="col-2">
+      <div class="col-12 col-lg-2">
         <div class="text-center my-4">
           <button @click="fight()" class="text-center btn btn-danger fw-bold">FIGHT!</button>
         </div>
