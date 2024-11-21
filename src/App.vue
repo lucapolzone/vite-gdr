@@ -91,7 +91,7 @@ export default {
     <div class="row g-3 d-flex justify-content-center align-items-center">
       <div class="col-12 col-lg-5 d-flex flex-column align-items-center">
         <h4 class="text-light">USER</h4>
-        <div v-if="userCard" class="card border-0 bg-transparent w-100">
+        <div v-if="userCard" class="card border-0 bg-transparent w-100 mb-3">
           <div class="card-header border-0 p-0">
             <h5 class="card-title text-center fs-1 text-light">{{ userCard.name }}</h5>
           </div>
@@ -127,7 +127,7 @@ export default {
 
       <div class="col-12 col-lg-5 d-flex flex-column align-items-center">
         <h4 class="text-light">COMPUTER</h4>
-        <div v-if="pcCard" class="card border-0 bg-transparent w-100">
+        <div v-if="pcCard" class="card border-0 bg-transparent w-100 mb-3">
           <div class="card-header border-0 p-0 text-light">
             <h5 class="card-title text-center fs-1">{{ pcCard.name }}</h5>
           </div>
