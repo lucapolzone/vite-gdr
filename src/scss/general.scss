@@ -13,4 +13,11 @@ body {
     max-height: 300px;
 }
 
+@media screen and (max-width: 480px) {
 
+  .ms-button-wrapper button {
+    // transform: scale(0.7);
+    font-size: .8rem;
+  }
+
+}

@@ -79,17 +79,17 @@ export default {
 
 <template>
   <div class="container">
-    <h1 class="text-center fw-bold">{{ title }}</h1>
+    <h1 class="text-center text-light">{{ title }}</h1>
     
     <!-- BOTTONE -->
-    <div class="text-center my-2">
+    <div class="text-center my-2 ms-button-wrapper">
       <button class="btn btn-success me-5 fw-bold" @click="handleStart('player')">PESCA UNA CARTA!</button>
       <button class="btn btn-warning fw-bold" @click="handleStart('pc')">PESCA LA CARTA DEL PC!</button>
     </div>
 
     <!-- CARD -->
     <div class="row g-3 d-flex justify-content-center align-items-center">
-      <div class="col-5 d-flex flex-column align-items-center">
+      <div class="col-12 col-lg-5 d-flex flex-column align-items-center">
         <h4 class="text-light">USER</h4>
         <div v-if="userCard" class="card border-0 bg-transparent w-100">
           <div class="card-header border-0 p-0">
@@ -120,12 +120,12 @@ export default {
       </div>
 
       <div class="col-2">
-        <div class="text-center">
+        <div class="text-center my-4">
           <button @click="fight()" class="text-center btn btn-danger fw-bold">FIGHT!</button>
         </div>
       </div>
 
-      <div class="col-5 d-flex flex-column align-items-center">
+      <div class="col-12 col-lg-5 d-flex flex-column align-items-center">
         <h4 class="text-light">COMPUTER</h4>
         <div v-if="pcCard" class="card border-0 bg-transparent w-100">
           <div class="card-header border-0 p-0 text-light">
