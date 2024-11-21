@@ -2,12 +2,15 @@
 @import "bootstrap/scss/bootstrap";
 
 body {
-  background-image: url("assets/ring.webp");
+  background-image: url("assets/wallpaper.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
   background-color: #f9c89a;
 }
 
 .image {
-    width: 400px;
+    max-height: 300px;
 }
+
+

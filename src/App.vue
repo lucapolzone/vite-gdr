@@ -79,83 +79,79 @@ export default {
 
 <template>
   <div class="container">
-    <h1 class="text-center">{{ title }}</h1>
+    <h1 class="text-center fw-bold">{{ title }}</h1>
     
     <!-- BOTTONE -->
     <div class="text-center my-2">
-      <button class="btn btn-success me-5" @click="handleStart('player')">PESCA UNA CARTA!</button>
-      <button class="btn btn-warning" @click="handleStart('pc')">PESCA LA CARTA DEL PC!</button>
+      <button class="btn btn-success me-5 fw-bold" @click="handleStart('player')">PESCA UNA CARTA!</button>
+      <button class="btn btn-warning fw-bold" @click="handleStart('pc')">PESCA LA CARTA DEL PC!</button>
     </div>
 
     <!-- CARD -->
     <div class="row g-3 d-flex justify-content-center align-items-center">
       <div class="col-5 d-flex flex-column align-items-center">
-        <h4>USER</h4>
+        <h4 class="text-light">USER</h4>
         <div v-if="userCard" class="card border-0 bg-transparent w-100">
-          <div class="card-header p-0">
-            <h5 class="card-title text-center fs-1">{{ userCard.name }}</h5>
+          <div class="card-header border-0 p-0">
+            <h5 class="card-title text-center fs-1 text-light">{{ userCard.name }}</h5>
           </div>
-          <div class="card-body p-0">            
-           <div class="image">
-            <img :src="api.baseUrl + userCard.type.image" class="w-100" alt="">
-           </div>
+          <div class="card-body text-center p-0">            
+            <img :src="api.baseUrl + userCard.type.image" class="image pb-2" alt="">
             <ul class="list-group list-group-flush">
               <li class="list-group-item p-0 bg-secondary ">
-                <strong class="fs-4">Attacco: {{ userCard.strength }}</strong>
+                <strong class="fs-5">Attacco: {{ userCard.strength }}</strong>
               </li>
               <li class="list-group-item p-0 bg-body-secondary">
-                <strong class="fs-4">Difesa: {{ userCard.defence }}</strong>
+                <strong class="fs-5">Difesa: {{ userCard.defence }}</strong>
               </li>
               <li class="list-group-item p-0 bg-secondary">
-                <strong class="fs-4">Velocità: {{ userCard.speed }}</strong>
+                <strong class="fs-5">Velocità: {{ userCard.speed }}</strong>
               </li>
               <li class="list-group-item p-0 bg-body-secondary">
-                <strong class="fs-4">Vita: {{ userCard.life }}</strong>
+                <strong class="fs-5">Vita: {{ userCard.life }}</strong>
               </li>
             </ul>
           </div>
         </div>
 
         <div v-else>
-          <p>nessuna carta scelta</p>
+          <p class="text-warning fw-bold">NESSUNA CARTA SCELTA</p>
         </div>
       </div>
 
       <div class="col-2">
         <div class="text-center">
-          <button @click="fight()" class="text-center btn btn-danger">FIGHT!</button>
+          <button @click="fight()" class="text-center btn btn-danger fw-bold">FIGHT!</button>
         </div>
       </div>
 
       <div class="col-5 d-flex flex-column align-items-center">
-        <h4>COMPUTER</h4>
+        <h4 class="text-light">COMPUTER</h4>
         <div v-if="pcCard" class="card border-0 bg-transparent w-100">
-          <div class="card-header p-0">
+          <div class="card-header border-0 p-0 text-light">
             <h5 class="card-title text-center fs-1">{{ pcCard.name }}</h5>
           </div>
-          <div class="card-body p-0">
-            <div class="image">
-              <img :src="api.baseUrl + pcCard.type.image" class="w-100" alt="">
-            </div>
+          <div class="card-body text-center p-0">
+              <img :src="api.baseUrl + pcCard.type.image" class="image pb-2" alt="">
             <ul class="list-group list-group-flush">
               <li class="list-group-item p-0 bg-secondary">
-                <strong class="fs-4">Attacco: {{ pcCard.strength }}</strong>
+                <strong class="fs-5">Attacco: {{ pcCard.strength }}</strong>
               </li>
               <li class="list-group-item p-0 bg-body-secondary">
-                <strong class="fs-4">Difesa: {{ pcCard.defence }}</strong>
+                <strong class="fs-5">Difesa: {{ pcCard.defence }}</strong>
               </li>
               <li class="list-group-item p-0 bg-secondary">
-                <strong class="fs-4">Velocità: {{ pcCard.speed }}</strong>
+                <strong class="fs-5">Velocità: {{ pcCard.speed }}</strong>
               </li>
               <li class="list-group-item p-0 bg-body-secondary">
-                <strong class="fs-4">Vita: {{ pcCard.life }}</strong>
+                <strong class="fs-5">Vita: {{ pcCard.life }}</strong>
               </li>
             </ul>
           </div>
         </div>
 
         <div v-else>
-          <p>nessuna carta scelta</p>
+          <p class="text-warning fw-bold">NESSUNA CARTA SCELTA</p>
         </div>
       </div>
     </div>
