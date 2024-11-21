@@ -126,7 +126,7 @@ export default {
 
       <div class="col-12 col-lg-2">
         <div class="text-center my-4">
-          <button @click="fight()" class="text-center btn btn-danger fw-bold">FIGHT!</button>
+          <button @click="fight()" class="text-center btn btn-danger fw-bold" id="ms-first-fight">FIGHT!</button>
         </div>
       </div>
 
@@ -169,6 +169,13 @@ export default {
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-12 text-center mt-4 d-none" id="ms-second-fight">
+        <button @click="fight()" class="text-center btn btn-danger fw-bold">FIGHT!</button>
+      </div>
+    </div>
+
   </div>
 </template>
 
