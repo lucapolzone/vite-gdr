@@ -79,8 +79,12 @@ export default {
 
 <template>
   <div class="container">
-    <h1 class="text-center text-light">{{ title }}</h1>
-    <p style="font-size: 1.4rem; line-height: 1.7rem;" class="text-center fw-bold text-light">Pesca le carte, premi su FIGHT! e scopri qual è la più forte!</p>
+    <h1 class="text-center text-warning mt-4 fw-semibold">{{ title }}</h1>
+    <div class="d-flex justify-content-center">
+      <div class="rounded-3 p-4 pb-2 my-4" style="background-color: rgba(70, 70, 70, 0.8); width: fit-content;">
+        <p style="font-size: 1.4rem; line-height: 1.7rem;" class="fw-semibold text-center text-light">Pesca le carte, premi su <span class="text-danger">FIGHT</span> e scopri chi vince!</p>
+      </div>
+    </div>
 
     <!-- CARD -->
     <div class="row g-3 d-flex justify-content-center align-items-center">
@@ -171,7 +175,7 @@ export default {
     </div>
 
     <div class="row">
-      <div class="col-12 text-center mt-4 d-none" id="ms-second-fight">
+      <div class="col-12 text-center my-4 d-none" id="ms-second-fight">
         <button @click="fight()" class="text-center btn btn-danger fw-bold">FIGHT!</button>
       </div>
     </div>
